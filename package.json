@@ -1,0 +1,19 @@
+{
+  "name": "spotmon",
+  "version": "1.0.0",
+  "description": "a very basic api crawler which saves data to a mongo database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "spotmon": "node index.js"
+  },
+  "author": "alexej bormatenkow (serendipity-labs)",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.2.0",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2"
+  }
+}
