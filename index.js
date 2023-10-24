@@ -129,10 +129,12 @@ app.get('/callback', function (req, res) {
                 };
 
                 request.get(playlistOptions, function (error, response, body) {
-                    // return body data to client as json
+                    // create a new array of track objects from the items array
+                    const tracks = body.tracks.items.map(item => item.track);
                     //console.log(response);
                     const client = new MongoClient(uri);
-                    savePlayListToNewCollection(client, body.name, body.tracks.items);
+                    console.log(tracks);
+                    savePlayListToNewCollection(client, body.name, tracks);
                     res.json(body);
                 });
 
